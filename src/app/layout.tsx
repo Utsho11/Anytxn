@@ -27,6 +27,7 @@ export default function RootLayout({
       <body
         data-new-gr-c-s-check-loaded="14.1219.0"
         data-gr-ext-installed=""
+        cz-shortcut-listen="true"
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
