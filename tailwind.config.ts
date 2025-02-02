@@ -56,6 +56,19 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      fontFamily: {
+        montserrat: ["Montserrat", "sans-serif"],
+      },
+      fontWeight: {
+        // Add specific weights you need
+        normal: "400",
+        medium: "500",
+        semibold: "600",
+        bold: "700",
+      },
+      animation: {
+        "spin-slow": "spin 10s linear infinite",
+      },
     },
   },
   // eslint-disable-next-line @typescript-eslint/no-require-imports
