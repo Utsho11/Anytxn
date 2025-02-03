@@ -24,10 +24,12 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-blue-600 py-4">
+    <nav
+      className="bg-gradient-to-br from-[#00A9E0] to-blue-600
+ py-4 sticky top-0 z-50"
+    >
       <div className="container mx-auto px-4 lg:px-32">
         <div className="flex items-center justify-between">
-          {/* Left Side - Logo */}
           <div className="flex items-center">
             <Image
               src="https://cdn.sanity.io/images/6jywt20u/production/ed83f5f1e94efb47572d503f53456dcff902b81c-200x32.svg?w=200&auto=format"
@@ -37,7 +39,6 @@ const Header = () => {
             />
           </div>
 
-          {/* Middle - Navigation (Hidden on Small Screens) */}
           <div className="hidden md:flex items-center space-x-6">
             <NavigationMenu>
               <NavigationMenuList className="flex space-x-5">
@@ -65,7 +66,6 @@ const Header = () => {
                   About Us
                 </NavigationMenuItem>
 
-                {/* Language Selector */}
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <button className="flex items-center justify-center text-lg text-white border border-white rounded-full p-2 gap-2">
@@ -95,8 +95,6 @@ const Header = () => {
               </NavigationMenuList>
             </NavigationMenu>
           </div>
-
-          {/* Right Side - Contact Button */}
           <div className="hidden md:flex">
             <button className="text-lg text-white flex items-center border py-2 px-4 group">
               <span>Contact Us</span>
@@ -104,7 +102,6 @@ const Header = () => {
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button onClick={() => setIsOpen(!isOpen)} className="text-white">
               {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -112,7 +109,6 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Mobile Dropdown Menu */}
         {isOpen && (
           <div className="md:hidden mt-4 bg-blue-700 p-4 rounded-lg">
             <div className="flex flex-col space-y-4 text-white">
@@ -120,7 +116,6 @@ const Header = () => {
               <button className="text-lg">Services</button>
               <button className="text-lg">About Us</button>
 
-              {/* Language Selector */}
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <button className="flex items-center justify-between text-lg border border-white rounded-full p-2">
@@ -148,7 +143,7 @@ const Header = () => {
                 </DropdownMenuContent>
               </DropdownMenu>
 
-              <button className="text-lg flex items-center border py-2 px-4">
+              <button className="text-lg flex items-center border py-2 px-4 ">
                 Contact Us
                 <ChevronRight className="ml-2 transition-transform duration-300 ease-in-out" />
               </button>
